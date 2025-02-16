@@ -22,6 +22,7 @@ public class CurrencyController {
 
     @GetMapping("/currencies")
     public List<AvailableCurrencyDto> getAvailableCurrencies(){
+
         return currencyService.getAvailableCurrencies();
     }
     @GetMapping(value="/convert/{base_currency}/{quote_currency}", produces = "application/json")
