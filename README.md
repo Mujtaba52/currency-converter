@@ -88,10 +88,12 @@ You can run the **unit test cases** using the following commands:
 
 ## 📜 API Endpoints (Example)
 
-| Method | Endpoint                                | Description                  |
-|--------|----------------------------------------|------------------------------|
+| Method | Endpoint                                                | Description                          |
+|--------|---------------------------------------------------------|--------------------------------------|
 | GET    | `/api/convert/{fromCurrency}/{toCurrency}?amount=VALUE` | Convert currency from one to another |
-| GET    | `/api/currencies`                      | Get the list of supported currencies |
+| GET    | `/api/currencies`                                       | Get the list of supported currencies |
+| GET    | `/api/security/csrf-token`                              | Get the Csrf token                   |
+| POST   | `/api/security/test-csrf?_csrf=VALUE`                   | Dummy endpoint to test csrf token    |
 
 📌 **Example Usage**:
 - **Convert 100 EUR to USD**:  

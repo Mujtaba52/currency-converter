@@ -20,8 +20,8 @@ public class SwopService {
     private String swopUrl;
     @Value("${swop.api.key}")
     private String swopApiKey;
-    public SwopService(WebClient.Builder webClientBuilder) {
-        this.webClient = WebClient.builder().baseUrl("https://swop.cx/rest").build();
+    public SwopService(WebClient.Builder webClientBuilder,  @Value("${swop.api.url}") String swopUrl) {
+        this.webClient = WebClient.builder().baseUrl(swopUrl).build();
     }
 
     public List<SwopAvailableCurrencyResponse> getAvailableCurrencies() {
